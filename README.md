@@ -76,7 +76,7 @@ The planning problem is encoded into conjunctive normal form (CNF) and solved in
 
 ## Project Structure
 
-```text
+```
 SokobanProject/
 │
 ├── src/              # Solver, encoders, predicates
@@ -89,7 +89,7 @@ SokobanProject/
 ├── main.py
 ├── requirements.txt
 └── README.md
-
+```
 ---
 ## Installation
 
