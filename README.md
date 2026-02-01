@@ -132,6 +132,13 @@ SokobanProject/
 └── README.md
 ```
 ---
+
+### Prerequisites
+- Python 3.6+ (Developed with Python 3.13)
+- MiniSat SAT Solver (included in `minisat/` directory)
+- PyGame 2.5+ (included in the requirements.txt)
+
+---
 ## Installation
 
 ``` pip install -r requirements.txt ```
