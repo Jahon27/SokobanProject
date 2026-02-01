@@ -73,6 +73,47 @@ The planning problem is encoded into conjunctive normal form (CNF) and solved in
    - Entities that are not affected by an action persist unchanged between consecutive time steps
 
 ---
+### Output Files
+
+The solver generates several output files in the `output/` directory:
+
+- `cnf.txt` — CNF theory in human-readable format  
+- `dimacs.txt` — DIMACS format for MiniSat  
+- `variables.txt` — Variable mapping for predicates  
+- `solution.txt` — MiniSat solution output  
+
+
+### Output Example and Explanation
+
+When you run the solver, you will see output similar to the following:
+
+```text
+Writing theory and solving the problem...
+DONE
+Solution found, actions:
+pushToGoal(1,1,1,2,1,3,1,1)
+move(2,1,1,1,2)
+move(1,1,1,2,3)
+move(1,2,1,3,4)
+move(1,3,1,4,5)
+move(1,4,2,4,6)
+move(2,4,3,4,7)
+move(3,4,3,3,8)
+move(3,3,3,2,9)
+push(2,3,2,2,2,1,2,10)
+pushToGoal(3,2,2,2,3,2,4,11)
+move(2,3,1,3,12)
+pushToGoal(2,1,3,1,2,1,1,13)
+```
+
+**Most importantly**, after the files are created, the program displays the step-by-step solution:
+
+- Each line is one action the player must take
+- Actions are numbered sequentially (1, 2, 3...)
+- `move(x1,y1,x2,y2,N)` means: at step N, move from (x1,y1) to (x2,y2)
+- `push(box,X,Y,x1,y1,x2,y2,N)` means: at step N, push box from (x1,y1) to (x2,y2) with player at (X,Y)
+- `pushToGoal` is like push, but the box ends up in a goal position
+
 
 ## Project Structure
 
